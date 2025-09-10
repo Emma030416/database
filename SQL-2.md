@@ -1,12 +1,28 @@
-[【篇一在这里，点击链接查看~】](https://blog.csdn.net/2503_90543222/article/details/149499217?ops_request_misc=elastic_search_misc&request_id=9e22f7bcca1847f2a5f94a9b8f05dcf8&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~ElasticSearch~search_v2-1-149499217-null-null.142%5Ev102%5Epc_search_result_base9&utm_term=sql%E8%B6%85%E5%85%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9&spm=1018.2226.3001.4187)
-@[TOC](目录)
+# 目录
+7. [排序与分页](#排序与分页)<br>
+   7.1 [排序](#排序)  
+   7.2 [分页](#分页)  
+
+8. [多表查询](#多表查询)<br>
+   8.1 [一个案例引发的多表查询](#一个案例引发的多表查询)  
+   8.2 [多表查询的实现](#多表查询的实现)  
+   8.3 [多表查询的分类](#多表查询的分类)  <bR>
+       8.3.1 [等值连接 & 非等值连接](#等值连接--非等值连接)  
+       8.3.2 [自连接 & 非自连接](#自连接--非自连接)  
+       8.3.3 [内连接 & 外连接](#内连接--外连接)  
+           8.3.3.1 [概念](#概念)  
+           8.3.3.2 [如何实现内外连接（重点）](#如何实现内外连接重点)  
+           8.3.3.3 [SQL99 新特性](#sql99-新特性)
+<br><br>
 
 # 排序与分页
 ## 1. 排序
 （1）默认情况下，没有使用排序操作时，返回顺序按照添加的顺序展现。
 
 （2）使用 `ORDER BY` 排序，默认升序。
+
 在 ORDER BY...  后加 `ASC` 或 `DESC`，指明升序或降序，
+
 分别是 ascending（升） 和 descending（降）的缩写。
 
 升序写法：
@@ -37,10 +53,10 @@ SELECT last_name, salary, department_id FROM employees WHERE department_id IN (5
 SELECT last_name, salary * 12 annual_sal FROM employees ORDER BY annual_sal;
 ```
 
-> 原理：
-> 第一步：从哪个表里按什么条件筛选出哪一部分数据（最大程度过滤掉不需要的数据）；
-> 第二步：筛选出的数据中需要哪几列，若需要起别名就在这里起个别名；
-> 第三步：这些列里是否有需要排序的。
+> 原理：<br>
+> 第一步：从哪个表里按什么条件筛选出哪一部分数据（最大程度过滤掉不需要的数据）；<br>
+> 第二步：筛选出的数据中需要哪几列，若需要起别名就在这里起个别名；<br>
+> 第三步：这些列里是否有需要排序的。<br>
 > 因此，起别名是在筛选条件之后的，WHERE 中也就自然不能用别名了。
 
 （5）二级排序：
@@ -93,7 +109,8 @@ SELECT MIN(salary) AS least_salary FROM employees;
 
 （6）MYSQL8.0 新特性：`LIMIT... OFFSET...`
 例如，LIMIT 2 OFFSET 31 等同于 LIMIT 31, 2（反过来）
-<br>
+<br><br>
+
 # 多表查询
 
 多表查询，也称为关联查询，指两个或更多个表一起完成查询操作。
