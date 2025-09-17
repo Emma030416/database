@@ -116,7 +116,7 @@ SELECT MIN(salary) AS least_salary FROM employees;
 > 外键：比如员工表和部门表，关联字段为部门id。部门表里部门id是主键，我们声明员工表里的部门id为外键，保证员工表里的部门id必须在部门表里存在，相当于加了一个数据库级约束。
 
 ## 1. 一个案例引发的多表查询
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/bc2fb2d38513435abdd77a96f364d018.png)
+![在这里插入图片描述](./img/2-1.png)
 关联字段是 department_id 和 location_id ，
 （1）想知道员工 'Abel' 在哪个城市工作，可以进行多表查询，我们想到最直接的方法就是查三次：
 
@@ -187,7 +187,7 @@ SELECT e.first_name, d.department_name, e.department_id FROM employees e, depart
 > 例如要查询员工id、员工姓名、其管理者id、管理者姓名，就是员工表自连接。
 > 管理者id可以在员工表中用员工id查，而*管理者也是员工，因此管理者姓名又要在员工表中用管理者id查*。我们可以创建employees表的两个别名，看成两个表。**一个表是员工，一个表是管理者。关联字段就是员工表的管理者id和管理者表的员工id。**（理解）
 
-![在这里插入图片描述](./img/2-1.png)
+![在这里插入图片描述](./img/2-2.png)
 本质上是同一张表，用取别名的方式虚拟成两张表以代表不同的意义。
 
 ```sql
@@ -261,7 +261,7 @@ SELECT column,... FROM table2
 无重复部分时，去不去重都一样，但从sql优化的角度，去重是需要时间的，会降低效率，因此使用UNION ALL更好。
 
 ###### 7种JOINS
-![在这里插入图片描述](./img/2-2.png)
+![在这里插入图片描述](./img/2-3.png)
 
 ```sql
 # 中图：内连接 A∩B
