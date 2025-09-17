@@ -187,7 +187,7 @@ SELECT e.first_name, d.department_name, e.department_id FROM employees e, depart
 > 例如要查询员工id、员工姓名、其管理者id、管理者姓名，就是员工表自连接。
 > 管理者id可以在员工表中用员工id查，而*管理者也是员工，因此管理者姓名又要在员工表中用管理者id查*。我们可以创建employees表的两个别名，看成两个表。**一个表是员工，一个表是管理者。关联字段就是员工表的管理者id和管理者表的员工id。**（理解）
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/f963100af3e9400f81731832b13d0ba1.png)
+![在这里插入图片描述](./img/2-1.png)
 本质上是同一张表，用取别名的方式虚拟成两张表以代表不同的意义。
 
 ```sql
@@ -261,7 +261,8 @@ SELECT column,... FROM table2
 无重复部分时，去不去重都一样，但从sql优化的角度，去重是需要时间的，会降低效率，因此使用UNION ALL更好。
 
 ###### 7种JOINS
-![](https://i-blog.csdnimg.cn/direct/595e040233064dce84874811baa89f07.png)
+![在这里插入图片描述](./img/2-2.png)
+
 ```sql
 # 中图：内连接 A∩B
 SELECT e.employee_id, e.first_name, d.department_name
@@ -373,7 +374,4 @@ SELECT employee_id,last_name,department_name
 FROM employees e JOIN departments d
 USING (department_id);
 ```
-
-
----
 
