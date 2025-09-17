@@ -1,35 +1,30 @@
-# 目录
-1. [SQL 语言的分类](#sql-语言的分类)<br>
-   1.1 [DDL：数据定义语言](#ddl数据定义语言)  
-   1.2 [DML：数据操作语言](#dml数据操作语言)  
-   1.3 [DCL：数据控制语言](#dcl数据控制语言)  
-
-2. [SQL 语言的规则和规范](#sql-语言的规则和规范)<br>
-   2.1 [分号结尾](#分号结尾)  
-   2.2 [大小写问题](#大小写问题)  
-   2.3 [命名规则（暂时了解）](#命名规则暂时了解)  
-   2.4 [注释](#注释)  
-   2.5 [数据导入](#数据导入)  
-
-3. [基本的 SELECT 语句](#基本的-select-语句)<br>
-   3.1 [SELECT...](#select)  
-   3.2 [SELECT... FROM](#select-from)  
-   3.3 [列的别名](#列的别名)  
-   3.4 [去除重复行](#去除重复行)  
-   3.5 [空值 NULL](#空值-null)  
-   3.6 [着重号](#着重号)  
-   3.7 [查询常数](#查询常数)  
-
-4. [显示表的结构](#显示表的结构)
-
-5. [过滤数据](#过滤数据)
-
-6. [运算符](#运算符)<br>
-   6.1 [算术运算符](#算术运算符)  
-   6.2 [比较运算符](#比较运算符)  
-   6.3 [逻辑运算符](#逻辑运算符)  
-   6.4 [位运算符](#位运算符)  
-   6.5 [运算符的优先级](#运算符的优先级)  
+## 目录
+- [SQL 语言的分类](#sql-yu-yan-de-fen-lei)
+  - [DDL：数据定义语言](#ddl-shu-ju-ding-yi-yu-yan)
+  - [DML：数据操作语言](#dml-shu-ju-cao-zuo-yu-yan)
+  - [DCL：数据控制语言](#dcl-shu-ju-kong-zhi-yu-yan)
+- [SQL 语言的规则和规范](#sql-yu-yan-de-gui-ze-he-gui-fan)
+  - [分号结尾](#fen-hao-jie-wei)
+  - [大小写问题](#da-xiao-xie-wen-ti)
+  - [命名规则](#ming-ming-gui-ze)
+  - [注释](#zhu-shi)
+  - [数据导入](#shu-ju-dao-ru)
+- [基本的 SELECT 语句](#ji-ben-de-select-yu-ju)
+  - [SELECT...](#select)
+  - [SELECT... FROM](#select-from)
+  - [列的别名](#lie-de-bie-ming)
+  - [去除重复行](#qu-chu-zhong-fu-xing)
+  - [空值 NULL](#kong-zhi-null)
+  - [着重号](#zhuo-zhong-hao)
+  - [查询常数](#cha-xun-chang-shu)
+- [显示表的结构](#xian-shi-biao-de-jie-gou)
+- [过滤数据](#guo-lv-shu-ju)
+- [运算符](#yun-suan-fu)
+  - [算术运算符](#suan-shu-yun-suan-fu)
+  - [比较运算符](#bi-jiao-yun-suan-fu)
+  - [逻辑运算符](#luo-ji-yun-suan-fu)
+  - [位运算符](#wei-yun-suan-fu)
+  - [运算符的优先级](#yun-suan-fu-de-you-xian-ji)
 <br><br>
    
 #  SQL语言的分类
