@@ -32,16 +32,25 @@
 DDL (data definition language)
 定义了数据库、表、视图、索引等数据库对象
 
-关键字：`CREATE` /  `ALTER` / `DROP` / `RENAME` / `TRUNCATE`
-
-代表：创建 / 修改 / 删除 / 重命名 / 清空（清空表内容，表结构保留）
+| 关键字        | 操作类型 | 
+| ---------- | ---- | 
+| `CREATE`   | 创建   | 
+| `ALTER`    | 修改   |
+| `DROP`     | 删除（删除表结构）   | 
+| `RENAME`   | 重命名  | 
+| `TRUNCATE` | 清空（只清空数据，保留表结构）   | 
 
 ## 2. DML：数据操作语言
 DML (data manipulation language)
 
-对数据库记录进行==增删改查==，使用频率很高
+CRUD（增删改查）：<br>
+| 操作 | 全称     | 关键字      | 中文   |
+| -- | ------ | -------- | ---- |
+| 增  | CREATE | `INSERT` | 新增记录 |
+| 删  | DELETE | `DELETE` | 删除记录 |
+| 改  | UPDATE | `UPDATE` | 修改记录 |
+| 查  | READ   | `SELECT` | 查询记录 |
 
-关键字：`INSERT` / `DELETE` / `UPDATE` / `SELECT`
 
 ## 3. DCL：数据控制语言
 DCL (data control language)
