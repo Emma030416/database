@@ -46,7 +46,7 @@ DML (data manipulation language)
 CRUD（增删改查）：<br>
 | 操作 | 全称     | 关键字      | 中文   |
 | -- | ------ | -------- | ---- |
-| 增  | CREATE | `INSERT` | 新增记录 |
+| 增  | INSERT | `INSERT` | 新增记录 |
 | 删  | DELETE | `DELETE` | 删除记录 |
 | 改  | UPDATE | `UPDATE` | 修改记录 |
 | 查  | READ   | `SELECT` | 查询记录 |
